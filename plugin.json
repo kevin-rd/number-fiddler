@@ -3,15 +3,17 @@
 	"logo": "logo.png",
 	"features": [
 		{
-			"code": "numify",
-			"explain": "view number nicely",
+			"code": "converter",
+			"explain": "mechain unit converter",
 			"cmds": [
-				"numify",
+				"converter",
+				"zkme",
 				{
 					"type": "regex",
-					"label": "numify",
-					"match": "/^\\d{1,}$/",
-					"minLength": 1
+					"label": "converter",
+					"match": "/^(\\d{8,}|\\d+[a-zA-Z]{1,5}|\\d+\\.\\d+[a-zA-Z]{1,5}|\\d+\\.\\d+)$/",
+					"minLength": 2,
+					"maxLength": 36
 				}
 			]
 		}
